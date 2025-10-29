@@ -1,6 +1,7 @@
 # grpc-gateway-ex
 
-
+依赖
+https://github.com/bufbuild/protoc-gen-validate
 
 ## Getting started
 
