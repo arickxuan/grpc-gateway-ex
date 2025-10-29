@@ -1,0 +1,46 @@
+version: v2
+# inputs:
+#   - directory: .
+#     path:
+#       - proto/
+#     exclude_path:
+#       - third_party/googleapis/
+
+inputs:
+  - directory: proto
+  # - directory: third_party/googleapis
+managed:
+  enabled: false
+  override:
+    - file_option: go_package_prefix
+      value: usersrv/gen
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: gen
+    opt: paths=source_relative
+  - remote: buf.build/grpc/go
+    out: gen
+    opt:
+      - paths=source_relative
+      - require_unimplemented_servers=false
+  - remote: buf.build/grpc-ecosystem/gateway:v2.27.3
+    out: gen
+    opt: paths=source_relative
+  - local: protoc-gen-openapiv2 #openapiv2
+    out: gen/docs
+  - local: protoc-gen-validate #validate
+    out: gen
+    opt:
+      - lang=go
+  # - local: protoc-gen-go-http
+  #   out: gen
+  #   opt: paths=source_relative
+  # - remote: buf.build/connectrpc/gosimple:v1.19.1
+  #   out: gen
+  #   opt:
+  #     - paths=source_relative
+  #     - simple
+
+
+
+

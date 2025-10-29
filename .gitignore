@@ -1,0 +1,8 @@
+.idea
+.vscode
+logs
+applogs
+output
+.DS_Store
+third_party
+tmp

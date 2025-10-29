@@ -1,0 +1,25 @@
+# Buf configuration version.
+version: v2
+modules:
+  - path: proto
+    name: github.com/arick/usersrv
+  - path: third_party/googleapis
+
+    lint:
+        use:
+        - MINIMAL
+    breaking:
+        use:
+        - PACKAGE
+deps:
+  - github.com/googleapis/googleapis
+  - buf.build/googleapis/googleapis
+  - buf.build/grpc/grpc
+lint:
+  use:
+    - STANDARD
+  ignore:
+    - third_party
+breaking:
+  use:
+    - FILE
