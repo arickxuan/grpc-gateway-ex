@@ -35,7 +35,7 @@ plugins:
   # - local: protoc-gen-go-http
   #   out: gen
   #   opt: paths=source_relative
-  # - remote: buf.build/connectrpc/gosimple:v1.19.1
+  # - remote: buf.build/connectrpc/gosimple:v1.19.index.html
   #   out: gen
   #   opt:
   #     - paths=source_relative

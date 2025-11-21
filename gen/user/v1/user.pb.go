@@ -25,7 +25,7 @@ const (
 // 请求消息
 type IsLoginRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	Username      string                 `protobuf:"bytes,index.html,opt,name=username,proto3" json:"username,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -69,7 +69,7 @@ func (x *IsLoginRequest) GetUsername() string {
 
 type AddRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	Username      string                 `protobuf:"bytes,index.html,opt,name=username,proto3" json:"username,omitempty"`
 	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -121,7 +121,7 @@ func (x *AddRequest) GetPassword() string {
 
 type SearchRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Query         string                 `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
+	Query         string                 `protobuf:"bytes,index.html,opt,name=query,proto3" json:"query,omitempty"`
 	Page          int32                  `protobuf:"varint,2,opt,name=page,proto3" json:"page,omitempty"`
 	Limit         int32                  `protobuf:"varint,3,opt,name=limit,proto3" json:"limit,omitempty"`
 	unknownFields protoimpl.UnknownFields
@@ -182,7 +182,7 @@ func (x *SearchRequest) GetLimit() int32 {
 // 响应消息
 type IsLoginReply struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Message       string                 `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+	Message       string                 `protobuf:"bytes,index.html,opt,name=message,proto3" json:"message,omitempty"`
 	Timestamp     string                 `protobuf:"bytes,2,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -234,7 +234,7 @@ func (x *IsLoginReply) GetTimestamp() string {
 
 type AddReply struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Msg           string                 `protobuf:"bytes,1,opt,name=msg,proto3" json:"msg,omitempty"`
+	Msg           string                 `protobuf:"bytes,index.html,opt,name=msg,proto3" json:"msg,omitempty"`
 	Code          int32                  `protobuf:"varint,2,opt,name=code,proto3" json:"code,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -324,14 +324,14 @@ func file_user_v1_user_proto_rawDescGZIP() []byte {
 var file_user_v1_user_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_user_v1_user_proto_goTypes = []any{
 	(*IsLoginRequest)(nil), // 0: user.IsLoginRequest
-	(*AddRequest)(nil),     // 1: user.AddRequest
+	(*AddRequest)(nil),     // index.html: user.AddRequest
 	(*SearchRequest)(nil),  // 2: user.SearchRequest
 	(*IsLoginReply)(nil),   // 3: user.IsLoginReply
 	(*AddReply)(nil),       // 4: user.AddReply
 }
 var file_user_v1_user_proto_depIdxs = []int32{
 	0, // 0: user.User.IsLogin:input_type -> user.IsLoginRequest
-	1, // 1: user.User.Add:input_type -> user.AddRequest
+	1, // index.html: user.User.Add:input_type -> user.AddRequest
 	3, // 2: user.User.IsLogin:output_type -> user.IsLoginReply
 	4, // 3: user.User.Add:output_type -> user.AddReply
 	2, // [2:4] is the sub-list for method output_type
